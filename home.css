@@ -20,7 +20,7 @@ height:100vh;
 
 background:
 linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-url("sidebar.png");
+url("image/sidebar.png");
 
 background-size: cover;
 background-position: center;
@@ -378,7 +378,7 @@ left:0;
   margin-left: 250px; /* sidebar width */
   padding: 30px;
 
-  background-image: url("main.png");
+  background-image: url("image/main.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -395,7 +395,7 @@ left:0;
 }
 .ai-card {
   background-image: linear-gradient(rgba(0,0,0,0.2),
-  rgba(0,0,0,0.2)), url("aiintern.jpg");
+  rgba(0,0,0,0.2)), url("image/aiintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -403,7 +403,7 @@ left:0;
 }
 .front-card {
   background-image: 
-   url("frontintern.jpg");
+   url("image/frontintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -412,7 +412,7 @@ left:0;
 .back-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("backintern.jpg");
+   url("image/backintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -420,7 +420,7 @@ left:0;
 }
 .cyber-card {
   background-image: 
-   url("cyberintern.jpg");
+   url("image/cyberintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -429,7 +429,7 @@ left:0;
 .machine-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("machine.jpg");
+   url("image/machine.jpg");
 
   background-size: cover;
   background-position: center;
@@ -438,7 +438,7 @@ left:0;
 .cloud-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("cloud.png");
+   url("image/cloud.png");
 
   background-size: cover;
   background-position: center;
@@ -447,7 +447,7 @@ left:0;
 .ui-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("ui.jpg");
+   url("image/ui.jpg");
 
   background-size: cover;
   background-position: center;
@@ -456,7 +456,7 @@ left:0;
 .full-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("full.jpg");
+   url("image/full.jpg");
 
   background-size: cover;
   background-position: center;
@@ -465,7 +465,7 @@ left:0;
 .app-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("app.jpg");
+   url("image/app.jpg");
 
   background-size: cover;
   background-position: center;
@@ -474,7 +474,7 @@ left:0;
 .react-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("react.png");
+   url("image/react.png");
 
   background-size: cover;
   background-position: center;
@@ -483,7 +483,7 @@ left:0;
 .java-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("java.jpg");
+   url("image/java.jpg");
 
   background-size: cover;
   background-position: center;
@@ -492,7 +492,7 @@ left:0;
 .software-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("software.jpg");
+   url("image/software.jpg");
 
   background-size: cover;
   background-position: center;
@@ -501,7 +501,7 @@ left:0;
 .devops-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("devops.jpg");
+   url("image/devops.jpg");
 
   background-size: cover;
   background-position: center;
@@ -510,7 +510,7 @@ left:0;
 .block-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("blockchain.jpg");
+   url("image/blockchain.jpg");
 
   background-size: cover;
   background-position: center;
@@ -519,7 +519,7 @@ left:0;
 .game-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("game.jpg");
+   url("image/game.jpg");
 
   background-size: cover;
   background-position: center;
@@ -528,7 +528,7 @@ left:0;
 .embedd-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("embedd.jpg");
+   url("image/embedd.jpg");
 
   background-size: cover;
   background-position: center;
@@ -537,7 +537,7 @@ left:0;
 .iot-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("iotintern.jpg");
+   url("image/iotintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -546,7 +546,7 @@ left:0;
 .data-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("dataintern.jpg");
+   url("image/dataintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -555,7 +555,7 @@ left:0;
 .buisness-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("buisnessintern.jpg");
+   url("image/buisnessintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -564,7 +564,7 @@ left:0;
 .cloud-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("cloudintern.jpg");
+   url("image/cloudintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -573,7 +573,7 @@ left:0;
 .digital-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("digitalintern.jpg");
+   url("image/digitalintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -582,7 +582,7 @@ left:0;
 .product-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("productintern.jpg");
+   url("image/productintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -591,7 +591,7 @@ left:0;
 .network-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("networkintern.jpg");
+   url("image/networkintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -600,7 +600,7 @@ left:0;
 .database-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("databaseintern.jpg");
+   url("image/databaseintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -609,7 +609,7 @@ left:0;
 .ar-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("arintern.jpg");
+   url("image/arintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -618,7 +618,7 @@ left:0;
 .technical-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("technicalintern.jpg");
+   url("image/technicalintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -627,7 +627,7 @@ left:0;
 .robotics-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("roboticsintern.jpg");
+   url("image/roboticsintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -636,7 +636,7 @@ left:0;
 .cyberthreat-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("cyberthreatintern.jpg");
+   url("image/cyberthreatintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -645,7 +645,7 @@ left:0;
 .web-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("webintern.jpg");
+   url("image/webintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -654,7 +654,7 @@ left:0;
 .datascience-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("datascienceintern.jpg");
+   url("image/datascienceintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -663,7 +663,7 @@ left:0;
 .game-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("game.jpg");
+   url("image/game.jpg");
 
   background-size: cover;
   background-position: center;
@@ -673,7 +673,7 @@ left:0;
 .embedd-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("embedded.jpg");
+   url("image/embedded.jpg");
 
   background-size: cover;
   background-position: center;
@@ -683,7 +683,7 @@ left:0;
 .iot-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("iot.jpg");
+   url("image/iot.jpg");
 
   background-size: cover;
   background-position: center;
@@ -692,7 +692,7 @@ left:0;
 .data-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("data.jpg");
+   url("image/data.jpg");
 
   background-size: cover;
   background-position: center;
@@ -702,7 +702,7 @@ left:0;
 .buisness-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("dataanalyst.jpg");
+   url("image/dataanalyst.jpg");
 
   background-size: cover;
   background-position: center;
@@ -712,7 +712,7 @@ left:0;
 .cloud-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("cloud.jpg");
+   url("image/cloud.jpg");
 
   background-size: cover;
   background-position: center;
@@ -721,7 +721,7 @@ left:0;
 .digital-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("digital.jpg");
+   url("image/digital.jpg");
 
   background-size: cover;
   background-position: center;
@@ -731,7 +731,7 @@ left:0;
 .product-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("product.jpg");
+   url("image/product.jpg");
 
   background-size: cover;
   background-position: center;
@@ -741,7 +741,7 @@ left:0;
 .network-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("network.jpg");
+   url("image/network.jpg");
 
   background-size: cover;
   background-position: center;
@@ -750,7 +750,7 @@ left:0;
 .database-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("database.jpg");
+   url("image/database.jpg");
 
   background-size: cover;
   background-position: center;
@@ -760,7 +760,7 @@ left:0;
 .ar-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("arvr.jpg");
+   url("image/arvr.jpg");
 
   background-size: cover;
   background-position: center;
@@ -770,7 +770,7 @@ left:0;
 .technical-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("technical.jpg");
+   url("image/technical.jpg");
 
   background-size: cover;
   background-position: center;
@@ -779,7 +779,7 @@ left:0;
 .robotics-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("robotics.jpg");
+   url("image/robotics.jpg");
 
   background-size: cover;
   background-position: center;
@@ -789,7 +789,7 @@ left:0;
 .cyberthreat-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("cyberthreat.jpg");
+   url("image/cyberthreat.jpg");
 
   background-size: cover;
   background-position: center;
@@ -799,7 +799,7 @@ left:0;
 .web-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("webdevelopment.jpg");
+   url("image/webdevelopment.jpg");
 
   background-size: cover;
   background-position: center;
@@ -808,7 +808,7 @@ left:0;
 .data-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("dataengineer.jpg");
+   url("image/dataengineer.jpg");
 
   background-size: cover;
   background-position: center;
@@ -817,7 +817,7 @@ left:0;
 .datascience-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
   rgba(0,0,0,0.3)),
-   url("datascience.jpg");
+   url("image/datascience.jpg");
 
   background-size: cover;
   background-position: center;
