@@ -1,0 +1,386 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #1e2a38;
+    color: white;
+        text-align: center;
+
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* TITLE */
+
+.page-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+/* COURSE GRID */
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 20px 40px 60px;
+    
+}
+
+/* COURSE CARD */
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+}
+
+/* COURSE TITLE */
+
+.course-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+}
+
+/* COURSE DESCRIPTION */
+
+.course-desc {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+
+.start-btn {
+    background-color: #1E2A38;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background-color: #FFE5D9;
+}
+.html-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.5)), url("htmlcourse.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.css-card {
+  background-image: linear-gradient(rgba(0,0,0,0.3),
+  rgba(0,0,0,0.3)), url("csscourse.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.js-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("jscourse.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.python-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("pythonintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.data-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("ds.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.database-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("datamanagment.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.os-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("os.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.computer-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("computer.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.git-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("git.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.node-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("node.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.react-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("react.png");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.ui-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("ui.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.java-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("java.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.c-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("c.png");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.cplus-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("c++.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cyber-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("cyberintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.cloud-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("cloud.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.ml-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("ml.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.ai-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("aicourse.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.resume-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("resume.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.interview-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("interview.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.aptitude-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("aptitude.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.communication-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("communication.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.project-card {
+  background-image: linear-gradient(rgba(0,0,0,0.4),
+  rgba(0,0,0,0.4)), url("project.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  width: 320px;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.platform-btn {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  background: #2c7be5;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.platform-btn:hover {
+  background: #1a5edb;
+}
+.search-box {
+  text-align: center;
+  margin: 25px 0 10px 0;
+}
+
+.search-box input {
+  width: 60%;
+  max-width: 500px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #2c7be5;
+  box-shadow: 0px 6px 18px rgba(44,123,229,0.25);
+}
+.courses-info-banner {
+  width: 85%;
+  margin: 25px auto;
+  padding: 18px 25px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #f0f6ff, #ffffff);
+  border-left: 6px solid #2c7be5;
+
+  font-size: 16px;
+  color: #2c3e50;
+  text-align: center;
+
+  box-shadow: 0px 6px 20px rgba(44, 123, 229, 0.15);
+
+  transition: 0.3s ease;
+}
+
+.courses-info-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 35px rgba(44, 123, 229, 0.25);
+}
+
+.courses-info-banner b {
+  color: #2c7be5;
+}
+
+

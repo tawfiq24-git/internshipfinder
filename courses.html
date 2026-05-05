@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Courses for Internship</title>
+
+<link rel="stylesheet" href="course.css">
+</head>
+
+<body>
+
+<div class="header">
+Internship Preparation Portal
+</div>
+<div class="courses-info-banner">
+  🌐 Learn internship-ready courses through trusted platforms like
+  <b>Infosys Springboard</b>, <b>NPTEL</b>, <b>Coursera</b>, and <b>freeCodeCamp</b>.
+  Select your preferred platform after clicking <b>Start Course</b>.
+</div>
+
+
+<div class="page-title">
+Courses for Internship Preparation
+</div>
+<div class="search-box">
+  <input
+    type="text"
+    id="courseSearch"
+    placeholder="Search courses (e.g., Python, DBMS, AI...)"
+    onkeyup="searchCourses()"
+  >
+</div>
+
+
+<div class="course-container">
+
+<!-- COURSE CARDS -->
+
+<div class="course-card html-card">
+<div class="course-title">HTML Fundamentals</div>
+<div class="course-desc">Build structured web pages</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card css-card">
+<div class="course-title">CSS Advanced Styling</div>
+<div class="course-desc">Create responsive layouts</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card js-card">
+<div class="course-title">JavaScript Essentials</div>
+<div class="course-desc">Add dynamic website features</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card python-card">
+<div class="course-title">Python Programming</div>
+<div class="course-desc">Learn automation & scripting</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card data-card">
+<div class="course-title">Data Structures</div>
+<div class="course-desc">Arrays, stacks, queues & trees</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card database-card">
+<div class="course-title">Database Management</div>
+<div class="course-desc">SQL & relational databases</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card os-card">
+<div class="course-title">Operating Systems</div>
+<div class="course-desc">Core system concepts</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card computer-card">
+<div class="course-title">Computer Networks</div>
+<div class="course-desc">Networking fundamentals</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card git-card">
+<div class="course-title">Git & GitHub</div>
+<div class="course-desc">Version control mastery</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card node-card">
+<div class="course-title">Node.js Backend</div>
+<div class="course-desc">Server-side development</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card react-card">
+<div class="course-title">React Basics</div>
+<div class="course-desc">Modern frontend framework</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card ui-card">
+<div class="course-title">UI/UX Design</div>
+<div class="course-desc">Professional interface design</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card java-card">
+<div class="course-title">Java Programming</div>
+<div class="course-desc">Object-oriented concepts</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card c-card">
+<div class="course-title">C Programming</div>
+<div class="course-desc">Programming fundamentals</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card cplus-card">
+<div class="course-title">C++ Programming</div>
+<div class="course-desc">Advanced structured coding</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card cyber-card">
+<div class="course-title">Cybersecurity Basics</div>
+<div class="course-desc">Protect systems & networks</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card cloud-card">
+<div class="course-title">Cloud Computing</div>
+<div class="course-desc">AWS & deployment basics</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card ml-card">
+<div class="course-title">Machine Learning Intro</div>
+<div class="course-desc">Core ML algorithms</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card ai-card">
+<div class="course-title">Artificial Intelligence</div>
+<div class="course-desc">AI concepts & applications</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card resume-card">
+<div class="course-title">Resume Building</div>
+<div class="course-desc">Create professional resume</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card interview-card">
+<div class="course-title">Interview Preparation</div>
+<div class="course-desc">HR & technical questions</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card aptitude-card">
+<div class="course-title">Aptitude Training</div>
+<div class="course-desc">Logical reasoning skills</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card communication-card">
+<div class="course-title">Communication Skills</div>
+<div class="course-desc">Improve professional English</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+<div class="course-card project-card">
+<div class="course-title">Project Development</div>
+<div class="course-desc">Build internship-ready projects</div>
+<button class="start-btn" onclick="openPlatformOptions()">Start Course</button>
+</div>
+
+</div>
+<div id="platformModal" class="modal">
+
+  <div class="modal-content">
+    <h3>Select Learning Platform</h3>
+
+    <a href="https://infyspringboard.onwingspan.com/" target="_blank">
+      <button class="platform-btn">Infosys Springboard</button>
+    </a>
+
+    <a href="https://nptel.ac.in/" target="_blank">
+      <button class="platform-btn">NPTEL</button>
+    </a>
+
+    <a href="https://www.coursera.org/" target="_blank">
+      <button class="platform-btn">Coursera</button>
+    </a>
+
+    <a href="https://www.freecodecamp.org/" target="_blank">
+      <button class="platform-btn">freeCodeCamp</button>
+    </a>
+
+    <br><br>
+
+    <button onclick="closePlatformOptions()">Cancel</button>
+  </div>
+
+</div>
+<script>
+
+function openPlatformOptions() {
+  document.getElementById("platformModal").style.display = "block";
+}
+
+function closePlatformOptions() {
+  document.getElementById("platformModal").style.display = "none";
+}
+
+</script>
+<script>
+
+function searchCourses() {
+
+  let input = document.getElementById("courseSearch").value.toLowerCase();
+
+  let cards = document.querySelectorAll(".course-card");
+
+  cards.forEach(function(card) {
+
+    let title = card.querySelector(".course-title").innerText.toLowerCase();
+
+    if (title.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>

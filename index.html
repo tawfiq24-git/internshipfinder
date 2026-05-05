@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Internship Finder Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+
+    <div class="left-panel">
+
+        <div class="content">
+
+            <h1>Smart Internship<br>Finder Portal</h1>
+
+            <p>
+                Find internships that match your skills
+                and build your future today.
+            </p>
+
+            <ul>
+                <li>✔ Personalized internship suggestions</li>
+                <li>✔ Save and track applications</li>
+                <li>✔ Explore opportunities by skill</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT PANEL -->
+
+    <div class="right-panel">
+
+        <form class="signup-form" action="login.html">
+
+            <h2>Create Account</h2>
+
+            <label>Full Name *</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label>Email *</label>
+            <input type="email" id="email"placeholder="Enter your email" required>
+
+            <label>Password *</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <label>Department *</label>
+
+            <div class="row">
+
+                <select required id="department">
+                    <option>Select</option>
+                    <option>CSE</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                </select>
+
+                <select required id="year">
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+
+            </div>
+
+       
+
+            <div class="checkbox">
+
+                <input type="checkbox" id="terms" required>
+                <span>
+                    I confirm that I have read and agree to the
+                    <a href="#">Terms & Conditions</a>
+                    and Privacy Policy
+                </span>
+
+            </div>
+
+         <button type="button" onclick="signupUser()">Create Account</button>
+
+
+
+
+            <p class="login-link">
+                Have an account? <a href="login.html">Sign In</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+<script>
+
+document.querySelector(".signup-form").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+window.location.href = "login.html";
+
+});
+
+</script>
+<script>
+
+document.querySelector(".signup-form").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+// get values
+
+let name = document.querySelector("input[type='text']").value;
+let email = document.querySelector("input[type='email']").value.trim().toLowerCase();
+let password = document.querySelector("input[type='password']").value;
+let skills = document.querySelectorAll("input[type='text']")[1].value;
+
+// check if email already exists
+
+if(localStorage.getItem(email)){
+
+alert("This email already exists. Please login.");
+
+return;
+
+}
+
+// store data
+
+let userData = {
+
+name: name,
+email: email,
+password: password,
+skills: skills
+
+};
+
+localStorage.setItem(email, JSON.stringify(userData));
+
+// redirect
+
+alert("Account created successfully!");
+
+window.location.href = "login.html";
+
+});
+
+</script>
+<script>
+
+function signupUser(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+let department = document.getElementById("department").value;
+let year = document.getElementById("year").value;
+let terms = document.getElementById("terms").checked;
+
+
+// validation
+
+if(name === "" || email === "" || password === "" || department === ""){
+alert("Please fill all fields");
+return;
+}
+
+if(!terms){
+alert("Please accept Terms & Conditions");
+return;
+}
+
+
+// get users
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+let exists = users.find(u => u.email === email);
+
+if(exists){
+alert("Email already exists");
+return;
+}
+
+
+// store user
+
+let newUser = {
+name,
+email,
+password,
+department,
+year
+};
+
+users.push(newUser);
+
+localStorage.setItem("users", JSON.stringify(users));
+
+
+// save logged user
+
+localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+
+
+alert("Account created successfully ✅");
+
+window.location.href = "login.html";
+
+}
+
+</script>
+</body>
+</html>

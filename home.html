@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Internship Finder Portal</title>
+
+<link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+    
+
+    <h2 class="brand-title">💡 Internship Finder</h2>
+
+    <ul>
+
+        <li class="active">Dashboard</li>
+        <li onclick="window.location.href='myapplication.html'">
+My Applications
+</li>
+<li onclick="window.location.href='courses.html'">courses for internship
+</li>      
+
+
+  <li onclick="window.location.href='settings.html'">
+Settings
+</li>
+    </ul>
+
+    <div class="logout">
+
+<span id="sidebarName"></span>
+        <button onclick="logout()">Logout</button>
+
+    </div>
+
+</div>
+
+
+
+<div class="main-content">
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <input type="text"  id="searchBox" placeholder="Search internships by skill, role or location...">
+
+        <div class="profile">
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- WELCOME SECTION -->
+
+    <div class="welcome">
+
+<h1>Welcome, <span id="welcomeName">User</span> 👋</h1>
+        <p>Explore internships matching your skills</p>
+
+    </div>
+
+
+    <!-- RECOMMENDED SECTION -->
+
+    <h2 class="section-title">All internships</h2>
+
+    <div class="cards">
+
+        <div class="card python-card">
+          <h3>Python Developer</h3>
+
+
+
+            <button  onclick="applyInternship('Python Developer Intern')">Apply</button>
+           
+
+
+        </div>
+
+
+        <div class="card ai-card">
+
+            <h3>AI Research Intern</h3>
+
+            <button onclick="applyInternship('AI Research Intern')">Apply</button>
+             
+
+
+        </div>
+        <div class="card front-card">
+<h3>Frontend Developer</h3>
+<button  onclick="applyInternship('Full Stack Developer Intern')">Apply</button>
+
+
+</div>
+
+<div class="card back-card">
+<h3 >Backend Developer Intern</h3>
+<button onclick="applyInternship('Backend Developer Intern')">Apply</button>
+
+
+
+</div>
+
+<div class="card cyber-card">
+<h3 >Cyber Security Intern</h3>
+<button onclick="applyInternship('Cyber Security Intern')">Apply</button>
+
+</div>
+
+<div class="card machine-card">
+<h3>Machine Learning Intern</h3>
+<button onclick="applyInternship('Machine Learning Intern')">Apply</button>
+
+
+</div>
+
+<div class="card cloud-card">
+<h3>Cloud Computing Intern</h3>
+<button  onclick="applyInternship('Cloud Computing Intern')">Apply</button>
+
+
+</div>
+
+<div class="card ui-card">
+<h3>UI/UX Design Intern</h3>
+<button onclick="applyInternship('UI/UX Design Intern')">Apply</button>
+
+
+</div>
+
+
+<div class="card full-card">
+<h3>Full Stack Developer Intern</h3>
+<button onclick="applyInternship('Full Stack Developer Intern')">Apply</button>
+
+</div>
+
+<div class="card app-card">
+<h3>Mobile App Developer Intern</h3>
+<button onclick="applyInternship('Mobile App Developer Intern')">Apply</button>
+
+</div>
+
+<div class="card react-card">
+<h3>React Developer Intern</h3>
+<button onclick="applyInternship('React Developer Intern')">Apply</button>
+
+
+</div>
+
+<div class="card java-card">
+<h3>Java Developer Intern</h3>
+<button onclick="applyInternship('Java Developer Intern')">Apply</button>
+
+</div>
+
+<div class="card software-card">
+<h3>Software Testing Intern</h3>
+<button onclick="applyInternship('Software Testing Intern')">Apply</button>
+
+</div>
+
+<div class="card devops-card">
+<h3>DevOps Intern</h3>
+<button onclick="applyInternship('DevOps Intern')">Apply</button>
+</div>
+
+<div class="card block-card">
+<h3>Blockchain Developer Intern</h3>
+<button onclick="applyInternship('Blockchain Developer Intern')">Apply</button>
+
+</div>
+
+<div class="card game-card">
+<h3>Game Developer Intern</h3>
+<button onclick="applyInternship('Game Developer Intern')">Apply</button>
+
+</div>
+
+<div class="card embedd-card">
+<h3>Embedded Systems Intern</h3>
+<button onclick="applyInternship('Embedded System Intern')">Apply</button>
+</div>
+
+<div class="card iot-card">
+<h3>IoT Developer Intern</h3>
+<button onclick="applyInternship('Iot Developer Intern')">Apply</button>
+
+</div>
+
+<div class="card data-card">
+<h3>Data Engineer Intern</h3>
+<button onclick="applyInternship('Data Engineer Intern')">Apply</button>
+
+</div>
+
+<div class="card buisness-card">
+<h3>Buisness Analyst Intern</h3>
+<button onclick="applyInternship('Buisness Analyst Intern')">Apply</button>
+
+</div>
+
+<div class="card cloud-card">
+<h3>Cloud Engineer Intern</h3>
+<button onclick="applyInternship('Cloud Engineer Intern')">Apply</button>
+
+</div>
+
+<div class="card digital-card">
+<h3>Digital Marketing Intern</h3>
+<button onclick="applyInternship('Digital Marketing Intern')">Apply</button>
+
+</div>
+
+<div class="card product-card">
+<h3>Product Management Intern</h3>
+<button onclick="applyInternship('Product Management Intern')">Apply</button>
+
+</div>
+
+<div class="card network-card">
+<h3>Network Engineer Intern</h3>
+<button onclick="applyInternship('Network Engineer Intern')">Apply</button>
+
+</div>
+
+<div class="card database-card">
+<h3>Database Administrator Intern</h3>
+<button onclick="applyInternship('Database Administrator Intern')">Apply</button>
+
+</div>
+
+<div class="card ar-card">
+<h3>AR/VR Developer Intern</h3>
+<button onclick="applyInternship('AR/VR Developer Intern')">Apply</button>
+</div>
+
+<div class="card technical-card">
+<h3>Technical Support Intern</h3>
+<button onclick="applyInternship('Technical Support Intern')">Apply</button>
+
+</div>
+
+<div class="card robotics-card">
+<h3>Robotics Intern</h3>
+<button onclick="applyInternship('Robotics Intern')">Apply</button>
+
+</div>
+
+<div class="card cyberthreat-card">
+<h3>Cyber Threat Analyst Intern</h3>
+<button onclick="applyInternship('Cyber Threat Analyst Intern')">Apply</button>
+</div>
+
+
+ <div class="card web-card">
+
+ <h3>Web Developer Intern</h3>
+<button onclick="applyInternship('Web Development Intern')">Apply</button>
+
+</div>
+
+        
+
+
+        <div class="card datascience-card">
+
+            <h3>Data Science Intern</h3>
+
+
+            <button onclick="applyInternship('Data Science Intern')">Apply</button>
+
+        </div>
+
+    </div>
+
+
+    
+       
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* Load logged-in user */
+
+let loggedUser = localStorage.getItem("loggedInUser");
+
+if(loggedUser){
+
+let user = JSON.parse(loggedUser);
+
+document.getElementById("welcomeName").innerText = user.name;
+
+document.getElementById("topName").innerText = user.name;
+
+document.getElementById("sidebarName").innerText = user.name;
+
+}
+
+
+/* logout function */
+
+function logout(){
+
+localStorage.removeItem("loggedInUser");
+
+window.location.href = "login.html";
+
+}
+
+</script>
+
+<script>
+
+document.getElementById("searchBox").addEventListener("keyup", function(){
+
+let value = this.value.toLowerCase();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(value)){
+
+card.style.display = "block";
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+});
+
+</script>
+<script>
+
+function applyInternship(role){
+
+localStorage.setItem("selectedInternship", role);
+
+window.location.href = "apply.html";
+
+}
+
+</script>
+<script>
+
+function saveInternship(role){
+
+let savedInternships =
+JSON.parse(localStorage.getItem("savedInternships")) || [];
+
+if(savedInternships.includes(role)){
+alert("Already saved ⭐");
+return;
+}
+
+savedInternships.push(role);
+
+localStorage.setItem(
+"savedInternships",
+JSON.stringify(savedInternships)
+);
+
+alert("Internship saved successfully ✅");
+
+}
+
+</script>
+<script>
+
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if(user){
+document.getElementById("welcomeName").innerText = user.name;
+document.getElementById("topName").innerText = user.name;
+document.getElementById("sidebarName").innerText = user.name;
+}
+
+</script>
+<script>
+
+function logout(){
+
+localStorage.removeItem("loggedInUser");
+
+window.location.href = "login.html";
+
+}
+
+</script>
+<script>
+
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if(user){
+document.getElementById("welcomeName").innerText = user.name;
+}
+
+</script>
+<script>
+if(user){
+
+document.getElementById("welcomeName").innerText = user.name;
+
+
+let side = document.getElementById("sidebarName");
+if(side) side.innerText = user.name;
+
+}
+</script>
+</body>
+</html>

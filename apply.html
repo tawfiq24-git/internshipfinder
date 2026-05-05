@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apply Internship</title>
+<link rel="stylesheet" href="apply.css">
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+<h2>Apply for <span id="internshipTitle"></span></h2>
+
+<label>Internship Role</label>
+<input type="text" id="role" readonly>
+
+<label>Select Company</label>
+<select id="company">
+<option>Google</option>
+<option>Microsoft</option>
+<option>Amazon</option>
+<option>Infosys</option>
+<option>TCS</option>
+<option>Zoho</option>
+<option>Wipro</option>
+<option>IBM</option>
+</select>
+
+<label>Select Location</label>
+<select id="location">
+<option>Chennai</option>
+<option>Bangalore</option>
+<option>Hyderabad</option>
+<option>Pune</option>
+<option>Mumbai</option>
+<option>Remote</option>
+</select>
+
+<label>Your Name</label>
+<input type="text"id="userName" placeholder="Enter your name">
+<label>Upload Profile Photo</label>
+
+<input type="file" id="profileImage" accept="image/*">
+
+<br><br>
+
+<img id="previewImage"
+style="width:120px;height:120px;border-radius:50%;display:none;border:2px solid #4CAF50;">
+<br>
+
+<button type="button" id="removeImageBtn" style="display:none;">
+Remove Image
+</button>
+<label>Date of Birth</label>
+
+<input type="date" id="dob">
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+<label>Select Your Skills</label>
+
+<div class="skills-box">
+
+<label class="skill-item"><input type="checkbox"> HTML</label>
+
+<label class="skill-item"><input type="checkbox"> CSS</label>
+
+<label class="skill-item"><input type="checkbox"> JavaScript</label>
+
+<label class="skill-item"><input type="checkbox"> Python</label>
+
+<label class="skill-item"><input type="checkbox"> Java</label>
+
+<label class="skill-item"><input type="checkbox"> SQL</label>
+
+<label class="skill-item"><input type="checkbox"> React</label>
+
+<label class="skill-item"><input type="checkbox"> Machine Learning</label>
+
+<label class="skill-item"><input type="checkbox"> Cyber Security</label>
+
+<label class="skill-item"><input type="checkbox"> Cloud Computing</label>
+
+</div>
+<label>Why should we select you?</label>
+<textarea></textarea>
+
+<button type="button" onclick="submitApplication()">Submit Application</button>
+
+<p id="successMessage"></p>
+</div>
+
+
+<script>
+
+/* Load internship title */
+
+let internship = localStorage.getItem("selectedInternship");
+
+document.getElementById("internshipTitle").innerText = internship;
+
+
+/* Submit application */
+
+function submitApplication(){
+
+document.getElementById("message").innerText =
+"Application submitted successfully for " + internship;
+
+}
+
+</script>
+<script>
+
+let internship = localStorage.getItem("selectedInternship");
+
+document.getElementById("role").value = internship;
+
+function submitApplication(){
+
+document.getElementById("successMessage").innerText =
+"Application submitted successfully!";
+
+}
+
+</script>
+<script>
+
+let internship = localStorage.getItem("selectedInternship");
+
+document.getElementById("internshipTitle").innerText = internship;
+
+document.getElementById("role").value = internship;
+
+</script>
+<script>
+
+document.getElementById("profileImage").addEventListener("change", function(event){
+
+let file = event.target.files[0];
+
+if(file){
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+
+let preview = document.getElementById("previewImage");
+
+preview.src = e.target.result;
+
+preview.style.display = "block";
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+</script>
+<script>
+
+let imageInput = document.getElementById("profileImage");
+
+let preview = document.getElementById("previewImage");
+
+let removeBtn = document.getElementById("removeImageBtn");
+
+
+// Show preview when image selected
+
+imageInput.addEventListener("change", function(event){
+
+let file = event.target.files[0];
+
+if(file){
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+
+preview.src = e.target.result;
+
+preview.style.display = "block";
+
+removeBtn.style.display = "inline-block";
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+
+// Remove image when button clicked
+
+removeBtn.addEventListener("click", function(){
+
+preview.src = "";
+
+preview.style.display = "none";
+
+imageInput.value = "";
+
+removeBtn.style.display = "none";
+
+});
+
+</script>
+<script>
+
+function submitApplication(){
+
+// get values safely
+
+let role = document.getElementById("internshipTitle").innerText;
+
+let name = document.getElementById("userName").value;
+
+let email = document.getElementById("email").value;
+
+let company = document.getElementById("company").value;
+
+let location = document.getElementById("location").value;
+
+let profileImage = document.getElementById("previewImage").src;
+
+
+// validation check
+
+if(name === "" || email === ""){
+
+alert("Please fill all required fields");
+
+return;
+
+}
+
+
+// store image
+
+localStorage.setItem("profileImage", img);
+
+
+// store form data
+
+let applicationData = {
+
+role: role,
+
+name: name,
+
+email: email,
+
+company: company,
+
+location: location
+
+};
+
+localStorage.setItem("applicationForm", JSON.stringify({role,name,email,company,location});
+
+
+// redirect to success page
+
+window.location.href = "success.html";
+
+}
+
+</script>
+<script>
+
+function submitApplication(){
+
+// Get internship role
+let roleElement = document.getElementById("internshipTitle");
+
+if(!roleElement){
+alert("Internship title not found");
+return;
+}
+
+let role = roleElement.innerText;
+
+
+// Get form values
+
+let name = document.getElementById("userName").value;
+
+let email = document.getElementById("email").value;
+
+let company = document.getElementById("company").value;
+
+let location = document.getElementById("location").value;
+
+let imageElement = document.getElementById("previewImage");
+
+let profileImage = imageElement ? imageElement.src : "";
+
+
+// Validate required fields
+
+if(name === "" || email === ""){
+alert("Please fill all required fields");
+return;
+}
+
+
+// Save data
+
+localStorage.setItem("applicationForm",
+JSON.stringify({
+role: role,
+name: name,
+email: email,
+company: company,
+location: location
+}));
+
+
+// Save profile image
+
+localStorage.setItem("profileImage", profileImage);
+
+
+// Redirect
+
+window.location.href = "success.html";
+
+}
+
+</script>
+<script>
+
+function submitApplication(){
+
+let role =
+document.getElementById("internshipTitle").innerText;
+
+let name =
+document.getElementById("userName").value;
+
+let dob = 
+document.getElementById("dob").value;
+
+let email =
+document.getElementById("email").value;
+
+let company =
+document.getElementById("company").value;
+
+let location =
+document.getElementById("location").value;
+
+let profileImage =
+document.getElementById("previewImage").src;
+
+
+// store latest application (for PDF)
+
+localStorage.setItem("applicationForm",
+JSON.stringify({role,name,dob,email,company,location}));
+
+
+// store multiple applications
+
+let allApplications =
+JSON.parse(localStorage.getItem("allApplications")) || [];
+
+allApplications.push({
+role,
+name,
+email,
+company,
+location,
+profileImage
+});
+
+localStorage.setItem("allApplications",
+JSON.stringify(allApplications));
+
+
+// store image separately for PDF
+
+localStorage.setItem("profileImage", profileImage);
+
+
+window.location.href="success.html";
+
+}
+
+</script>
+</body>
+</html>

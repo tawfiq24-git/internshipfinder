@@ -1,0 +1,854 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+display:flex;
+height:100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+width:270px;
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url("sidebar.png");
+
+background-size: cover;
+background-position: center;
+
+color:white;
+
+}
+.sidebar h2{
+
+margin-bottom:50px;
+
+}
+.brand-title {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 22px 20px;
+    position: relative;
+    display: inline-block;
+
+    /* Glass effect background */
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+
+    /* animated gradient text */
+    background: linear-gradient(
+        270deg,
+        #4facfe,
+        #00f2fe,
+        #43e97b,
+        #38f9d7,
+        #4facfe
+    );
+    background-size: 500% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientShift 6s linear infinite;
+
+    /* neon glow */
+    text-shadow:
+        0 0 6px rgba(79,172,254,0.5),
+        0 0 18px rgba(67,233,123,0.4);
+
+    transition: 0.4s ease;
+}
+
+
+/* Animated underline progress bar */
+.brand-title::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 6px;
+    height: 4px;
+    width: 0%;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #4facfe,
+        #43e97b
+    );
+
+    animation: underlineMove 3s infinite alternate;
+}
+
+
+/* moving shine sweep */
+.brand-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    animation: shinePass 4s infinite;
+}
+
+
+/* bulb glow animation */
+.brand-title span {
+    animation: bulbPulse 2s infinite alternate;
+}
+
+
+/* hover interaction */
+.brand-title:hover {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+}
+
+
+/* gradient movement */
+@keyframes gradientShift {
+    to {
+        background-position: 500% center;
+    }
+}
+
+
+/* underline animation */
+@keyframes underlineMove {
+    from { width: 20%; }
+    to { width: 80%; }
+}
+
+
+/* shine animation */
+@keyframes shinePass {
+    0% { left: -70%; }
+    100% { left: 160%; }
+}
+
+
+/* bulb glow pulse */
+@keyframes bulbPulse {
+    from {
+        filter: drop-shadow(0 0 2px gold);
+    }
+    to {
+        filter: drop-shadow(0 0 12px gold);
+    }
+}
+.sidebar ul{
+
+list-style:none;
+
+}
+
+.sidebar ul li{
+
+padding:18px;
+margin-bottom:15px;
+cursor:pointer;
+border-radius:5px;
+padding-left:-20px
+
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover{
+
+background:rgba(255,255,255,0.2);
+
+}
+
+.logout{
+
+margin-top:auto;
+
+}
+
+.logout button{
+
+margin-top:10px;
+padding:8px 14px;
+border:none;
+background:white;
+color:#3aa76d;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+
+/* MAIN CONTENT */
+
+.main-content{
+
+flex:1;
+padding:20px;
+background:white;
+overflow-y:auto;
+padding-left:1px
+
+}
+.main-content {
+  margin-left: 250px; /* same as sidebar width */
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+/* TOPBAR LAYOUT */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+
+/* SEARCH INPUT ADVANCED STYLE */
+#searchBox {
+
+    width: 55%;
+    padding: 14px 22px;
+    border-radius: 40px;
+
+    border: none;
+    outline: none;
+
+    font-size: 15px;
+
+    /* glass effect */
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+
+    /* shadow */
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.08);
+
+    transition: 0.35s ease;
+
+    /* search icon inside input */
+    padding-left: 45px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23666' viewBox='0 0 24 24'%3E%3Cpath d='M21 20l-5.2-5.2a7 7 0 10-1 1L20 21zM10 16a6 6 0 110-12 6 6 0 010 12z'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 18px;
+}
+
+
+/* HOVER EFFECT */
+#searchBox:hover {
+
+    box-shadow:
+        0 10px 25px rgba(79,172,254,0.25);
+
+}
+
+
+/* FOCUS EFFECT (MAIN MAGIC) */
+#searchBox:focus {
+
+    width: 65%;
+
+    background: rgba(255,255,255,0.85);
+
+    box-shadow:
+        0 0 0 3px rgba(79,172,254,0.25),
+        0 12px 28px rgba(0,0,0,0.15);
+
+}
+
+
+
+
+/* TOP BAR */
+
+.topbar{
+
+display:flex;
+justify-content:space-between;
+margin-bottom:30px;
+
+}
+
+
+
+/* WELCOME */
+
+.welcome{
+
+margin-bottom:30px;
+
+}
+
+.welcome h1{
+
+font-size:28px;
+
+}
+
+.section-title{
+
+margin:20px 0;
+
+}
+
+
+/* CARDS */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap: 20px;
+
+}
+
+.card{
+
+background:white;
+padding:20px;
+border-radius:12px;
+width:250px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+.card button{
+
+margin-top:10px;
+padding:8px 14px;
+background:#5dbb63;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+.card button:hover{
+
+background:#3aa76d;
+
+}
+.card-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.card-img{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+.sidebar{
+width:260px;
+height:100vh;
+position:fixed;
+top:0;
+left:0;
+}
+.main-content {
+  margin-left: 250px; /* sidebar width */
+  padding: 30px;
+
+  background-image: url("main.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
+.python-card {
+  background-image: linear-gradient(rgba(0,0,0,0.3),
+  rgba(0,0,0,0.3)), url("pythonintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.ai-card {
+  background-image: linear-gradient(rgba(0,0,0,0.2),
+  rgba(0,0,0,0.2)), url("aiintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.front-card {
+  background-image: 
+   url("frontintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.back-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("backintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.cyber-card {
+  background-image: 
+   url("cyberintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.machine-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("machine.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.cloud-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("cloud.png");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.ui-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("ui.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.full-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("full.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.app-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("app.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.react-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("react.png");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.java-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("java.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.software-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("software.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.devops-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("devops.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.block-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("blockchain.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.game-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("game.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.embedd-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("embedd.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.iot-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("iotintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.data-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("dataintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.buisness-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("buisnessintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.cloud-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("cloudintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.digital-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("digitalintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.product-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("productintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.network-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("networkintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.database-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("databaseintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.ar-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("arintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.technical-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("technicalintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.robotics-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("roboticsintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.cyberthreat-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("cyberthreatintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.web-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("webintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.datascience-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("datascienceintern.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.game-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("game.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.embedd-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("embedded.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.iot-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("iot.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.data-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("data.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.buisness-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("dataanalyst.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cloud-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("cloud.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.digital-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("digital.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.product-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("product.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.network-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("network.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.database-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("database.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.ar-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("arvr.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.technical-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("technical.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.robotics-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("robotics.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cyberthreat-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("cyberthreat.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.web-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("webdevelopment.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.data-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("dataengineer.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.datascience-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.3)),
+   url("datascience.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

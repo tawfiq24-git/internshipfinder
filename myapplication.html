@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>My Applications</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI;
+background:#f4f6f8;
+}
+
+.header{
+background:#4CAF50;
+color:white;
+padding:20px;
+font-size:24px;
+text-align:center;
+}
+
+.container{
+padding:40px;
+}
+
+.card{
+
+background:white;
+
+border-radius:14px;
+
+padding:20px;
+
+margin-bottom:20px;
+
+box-shadow:0px 5px 18px rgba(0,0,0,0.12);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.details{
+line-height:28px;
+}
+
+.profile-img{
+
+width:90px;
+height:90px;
+
+border-radius:12px;
+
+border:3px solid #4CAF50;
+
+object-fit:cover;
+
+}
+
+.empty{
+text-align:center;
+margin-top:80px;
+color:#888;
+font-size:20px;
+}
+
+.back-btn{
+
+margin:20px;
+
+background:#e53935;
+
+color:white;
+
+border:none;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+.remove-btn{
+
+background:#e53935;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+
+}
+
+.remove-btn:hover{
+
+background:#c62828;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="header">
+My Applications 📄
+</div>
+
+
+<button class="back-btn"
+onclick="window.location.href='home.html'">
+
+Back to Dashboard
+
+</button>
+
+
+<div class="container" id="applicationsContainer">
+
+</div>
+
+
+
+<script>
+
+let container =
+document.getElementById("applicationsContainer");
+
+
+// Load stored applications
+
+let storedApplications =
+JSON.parse(localStorage.getItem("allApplications")) || [];
+
+
+if(storedApplications.length === 0){
+
+container.innerHTML =
+"<div class='empty'>No applications submitted yet.</div>";
+
+}else{
+
+storedApplications.forEach((app, index) => {
+
+container.innerHTML += `
+<div class="card">
+
+<div class="details">
+
+<b>Role:</b> ${app.role} <br>
+<b>Name:</b> ${app.name} <br>
+<b>DOB:</b> ${app.dob} <br>
+<b>Email:</b> ${app.email} <br>
+<b>Company:</b> ${app.company} <br>
+<b>Location:</b> ${app.location}
+
+<br><br>
+
+<button onclick="removeApplication(${index})" class="remove-btn">
+Remove Application
+</button>
+
+</div>
+
+<img src="${app.profileImage}" class="profile-img">
+
+</div>
+`;
+
+});
+
+}
+
+</script>
+<script>
+
+function removeApplication(index){
+
+let storedApplications =
+JSON.parse(localStorage.getItem("allApplications")) || [];
+
+// remove selected item
+
+storedApplications.splice(index, 1);
+
+// save updated list
+
+localStorage.setItem(
+"allApplications",
+JSON.stringify(storedApplications)
+);
+
+// reload page
+
+location.reload();
+
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Application Submitted</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f4f6f8;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:16px;
+box-shadow:0 8px 30px rgba(0,0,0,0.12);
+text-align:center;
+width:480px;
+}
+
+button{
+padding:12px 22px;
+border:none;
+border-radius:8px;
+font-size:15px;
+cursor:pointer;
+margin:8px;
+}
+
+.download-btn{
+background:#4CAF50;
+color:white;
+}
+
+.back-btn{
+background:#e53935;
+color:white;
+}
+
+#pdfContent{
+width:650px;
+background:white;
+padding:40px;
+font-family:Arial;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 style="color:#2e7d32;">
+Application Submitted Successfully ✅
+</h2>
+
+<p>Your internship application has been recorded.</p>
+
+<button class="download-btn" onclick="downloadPDF()">
+Download Your Form
+</button>
+
+<button class="back-btn"
+onclick="window.location.href='home.html'">
+Back to Dashboard
+</button>
+
+</div>
+
+
+<!-- PDF CONTENT -->
+
+<div id="pdfContent">
+
+<div style="display:flex;justify-content:space-between">
+
+<div>
+
+<h2>Internship Application Form</h2>
+
+<p><b>Role:</b> <span id="pdfRole"></span></p>
+<p><b>Name:</b> <span id="pdfName"></span></p>
+<p><strong>Date of Birth:</strong><span id="pdfDob"></span></p>
+<p><b>Email:</b> <span id="pdfEmail"></span></p>
+<p><b>Company:</b> <span id="pdfCompany"></span></p>
+<p><b>Location:</b> <span id="pdfLocation"></span></p>
+
+</div>
+
+<img id="pdfImage"
+style="width:130px;height:130px;border-radius:10px;border:3px solid #4CAF50">
+
+</div>
+
+<hr>
+
+<p>Status: Submitted Successfully</p>
+
+</div>
+
+
+<script>
+function downloadPDF(){
+
+const data = JSON.parse(localStorage.getItem("applicationForm"));
+const img = localStorage.getItem("profileImage");
+
+if(!data){
+alert("No saved form data found");
+return;
+}
+
+document.getElementById("pdfRole").innerText = data.role;
+document.getElementById("pdfName").innerText = data.name;
+document.getElementById("pdfDob").innerText = data.dob || "";
+document.getElementById("pdfEmail").innerText = data.email;
+document.getElementById("pdfCompany").innerText = data.company;
+document.getElementById("pdfLocation").innerText = data.location;
+
+if(img){
+document.getElementById("pdfImage").src = img;
+}
+
+html2pdf(document.getElementById("pdfContent"));
+
+}
+</script>
+
+</body>
+</html>

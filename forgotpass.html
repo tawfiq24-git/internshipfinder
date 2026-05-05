@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reset Password</title>
+
+<style>
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Segoe UI;
+background:#eef2f3;
+}
+
+.container{
+width:400px;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2{
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#8bd100;
+border:none;
+color:white;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#76b800;
+}
+
+#error{
+color:red;
+margin-top:10px;
+}
+
+#success{
+color:green;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Reset Password</h2>
+
+<input type="email" id="email" placeholder="Enter registered email">
+
+<input type="password" id="newPassword" placeholder="Enter new password">
+
+<button onclick="resetPassword()">Update Password</button>
+
+<p id="error"></p>
+<p id="success"></p>
+
+</div>
+
+<script>
+
+function resetPassword(){
+
+let email = document.getElementById("email").value.trim().toLowerCase();
+
+let newPassword = document.getElementById("newPassword").value.trim();
+
+let error = document.getElementById("error");
+
+let success = document.getElementById("success");
+
+error.innerText = "";
+success.innerText = "";
+
+
+// check empty fields
+
+if(email === "" || newPassword === ""){
+
+error.innerText = "Please fill all fields.";
+
+return;
+
+}
+
+
+// check email exists
+
+let storedUser = localStorage.getItem(email);
+
+if(!storedUser){
+
+error.innerText = "Email not found. Please sign up first.";
+
+return;
+
+}
+
+
+// update password
+
+storedUser = JSON.parse(storedUser);
+
+storedUser.password = newPassword;
+
+localStorage.setItem(email, JSON.stringify(storedUser));
+
+success.innerText = "Password updated successfully! Redirecting to login...";
+
+
+setTimeout(()=>{
+
+window.location.href="login.html";
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>

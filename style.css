@@ -1,0 +1,173 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f5f7f6;
+}
+
+.container{
+width:90%;
+min-height:100vh;
+display:flex;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+
+/* LEFT PANEL */
+
+.left-panel{
+
+width:50%;
+background:linear-gradient(135deg,#cce3e9,#b7e4c7);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:60px;
+}
+
+.content h1{
+
+font-size:42px;
+color:#1c2b2d;
+margin-bottom:20px;
+}
+
+.content p{
+
+font-size:20px;
+color:#2f4f4f;
+margin-bottom:30px;
+line-height:1.5;
+}
+
+.content ul{
+
+list-style:none;
+}
+
+.content ul li{
+
+margin-bottom:15px;
+font-size:18px;
+color:#2f4f4f;
+}
+
+
+/* RIGHT PANEL */
+
+.right-panel{
+
+width:50%;
+background:#ffffff;
+display:flex;
+align-items:flex-start;
+justify-content:center;
+padding:70px 0;
+overflow-y:auto;
+}
+
+.signup-form{
+
+width:70%;
+}
+
+.signup-form h2{
+
+margin-bottom:25px;
+font-size:28px;
+color:#333;
+}
+
+.signup-form label{
+
+display:block;
+margin-top:15px;
+margin-bottom:6px;
+font-size:14px;
+color:#444;
+}
+
+.signup-form input{
+
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
+outline:none;
+}
+
+.row{
+
+display:flex;
+gap:10px;
+}
+
+.row select{
+
+flex:1;
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+.checkbox{
+
+margin-top:15px;
+font-size:13px;
+color:#555;
+display:flex;
+gap:8px;
+align-items:flex-start;
+}
+
+.checkbox a{
+
+color:#6ac259;
+text-decoration:none;
+font-weight:500;
+}
+
+button{
+
+width:100%;
+margin-top:20px;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#8bd100;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+
+background:#76b800;
+}
+
+.login-link{
+
+margin-top:15px;
+text-align:center;
+font-size:14px;
+}
+
+.login-link a{
+
+color:#333;
+text-decoration:none;
+font-weight:600;
+}

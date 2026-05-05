@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Settings</title>
+
+<style>
+
+body{
+font-family:Segoe UI;
+background:#f4f6f8;
+margin:0;
+}
+
+.header{
+background:#4CAF50;
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+}
+
+.container{
+width:400px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0px 5px 20px rgba(0,0,0,0.12);
+}
+
+label{
+font-weight:600;
+display:block;
+margin-top:15px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:6px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+
+margin-top:20px;
+width:100%;
+padding:12px;
+
+border:none;
+border-radius:8px;
+
+background:#4CAF50;
+color:white;
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+button:hover{
+background:#2e7d32;
+}
+
+.danger-btn{
+background:#e53935;
+}
+
+.danger-btn:hover{
+background:#c62828;
+}
+
+.logout-btn{
+background:#ff9800;
+}
+
+.logout-btn:hover{
+background:#ef6c00;
+}
+
+.profile-img{
+width:120px;
+height:120px;
+border-radius:50%;
+display:block;
+margin:auto;
+margin-bottom:15px;
+object-fit:cover;
+border:3px solid #4CAF50;
+}
+.setting-row{
+margin-top:18px;
+}
+
+.setting-value{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:6px;
+}
+
+.change-btn{
+background:#4CAF50;
+color:white;
+border:none;
+padding:4px 10px;
+border-radius:5px;
+font-size:12px;
+cursor:pointer;
+width:auto;          /* important fix */
+display:inline-block; /* prevents stretching */
+}
+.change-btn:hover{
+background:#2e7d32;
+}
+
+.hidden-input{
+display:none;
+width:100%;
+margin-top:10px;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="header">
+Settings 
+</div>
+
+
+<div class="container">
+
+<img id="profilePreview"
+class="profile-img"
+src="">
+
+<label>Change Profile Photo</label>
+
+<input type="file"
+id="newProfileImage"
+accept="image/*">
+
+<div class="setting-row">
+
+<label>Username</label>
+
+<div class="setting-value">
+
+<span id="displayName"></span>
+
+<button onclick="changeName()" class="change-btn">
+Change
+</button>
+
+</div>
+
+<input type="text" id="newName" class="hidden-input">
+
+</div>
+
+
+<button onclick="saveSettings()">
+Save Changes
+</button>
+
+
+<button class="danger-btn"
+onclick="clearSavedInternships()">
+
+Clear Saved Internships
+
+</button>
+
+
+<button class="danger-btn"
+onclick="clearApplications()">
+
+Clear Applications History
+
+</button>
+
+
+<button class="logout-btn"
+onclick="logoutUser()">
+
+Logout
+
+</button>
+
+</div>
+
+
+
+<script>
+
+/* Load existing profile image */
+
+let savedImage =
+localStorage.getItem("profileImage");
+
+if(savedImage){
+
+document.getElementById("profilePreview").src =
+savedImage;
+
+}
+
+
+/* Change profile image preview */
+
+document.getElementById("newProfileImage")
+.addEventListener("change", function(event){
+
+let file = event.target.files[0];
+
+if(file){
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+
+document.getElementById("profilePreview").src =
+e.target.result;
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+
+/* Save updated settings */
+
+function saveSettings(){
+
+let name =
+document.getElementById("newName").value;
+
+let email =
+document.getElementById("newEmail").value;
+
+let image =
+document.getElementById("profilePreview").src;
+
+
+if(name !== ""){
+localStorage.setItem("userName", name);
+}
+
+if(email !== ""){
+localStorage.setItem("userEmail", email);
+}
+
+localStorage.setItem("profileImage", image);
+
+alert("Settings updated successfully ✅");
+
+}
+
+
+/* Clear saved internships */
+
+function clearSavedInternships(){
+
+localStorage.removeItem("savedInternships");
+
+alert("Saved internships cleared");
+
+}
+
+
+/* Clear applications */
+
+function clearApplications(){
+
+localStorage.removeItem("allApplications");
+
+alert("Applications history cleared");
+
+}
+
+
+/* Logout */
+
+function logoutUser(){
+
+window.location.href="login.html";
+
+}
+
+</script>
+<script>
+
+// Load stored values
+
+document.getElementById("displayName").innerText =
+localStorage.getItem("userName") || "Not set";
+
+document.getElementById("displayEmail").innerText =
+localStorage.getItem("userEmail") || "Not set";
+
+
+// Enable name editing
+
+function changeName(){
+
+let input =
+document.getElementById("newName");
+
+input.style.display = "block";
+
+input.focus();
+
+input.addEventListener("change", function(){
+
+localStorage.setItem("userName", input.value);
+
+document.getElementById("displayName").innerText =
+input.value;
+
+input.style.display = "none";
+
+});
+
+}
+
+
+// Enable email editing
+
+function changeEmail(){
+
+let input =
+document.getElementById("newEmail");
+
+input.style.display = "block";
+
+input.focus();
+
+input.addEventListener("change", function(){
+
+localStorage.setItem("userEmail", input.value);
+
+document.getElementById("displayEmail").innerText =
+input.value;
+
+input.style.display = "none";
+
+});
+
+}
+
+</script>
+
+
+</body>
+</html>

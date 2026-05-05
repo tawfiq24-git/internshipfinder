@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Smart Internship Finder Portal</title>
+
+<link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+
+    <div class="left-panel">
+
+        <div class="content">
+
+            <h1>Smart Internship<br>Finder Portal</h1>
+
+            <p>
+                Empowering students to find the right
+                internships for their future.
+            </p>
+
+        </div>
+
+        <div class="illustration">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT PANEL -->
+
+    <div class="right-panel">
+
+        <form class="login-form">
+
+            <h2>Login</h2>
+
+            <label>Email *</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Password *</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <a href="forgotpass.html" class="forgot">Forgot password?</a>
+            <p id="error-message" style="color:red;"></p>
+
+<button type="button" onclick="loginUser()">Login</button>
+<p id="errorMsg"></p>
+            <p class="signup-link">
+                Don't have an account?
+                <a href="index.html">Sign Up</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+document.querySelector(".login-form").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+localStorage.setItem("loggedInUser", storedUser);
+window.location.href = "home.html";
+
+});
+
+</script>
+<script>
+
+document.querySelector(".login-form").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+window.location.href = "home.html";
+
+});
+
+</script>
+<script>
+
+function loginUser(){
+
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+let user = users.find(u => u.email === email);
+
+if(!user){
+showError("Email does not exist. Please sign up.");
+return;
+}
+
+if(user.password !== password){
+showError("Wrong password.");
+return;
+}
+
+// login success
+
+localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+window.location.href = "home.html";
+
+}
+
+
+// show error below form
+
+function showError(message){
+
+let error = document.getElementById("errorMsg");
+
+error.innerText = message;
+error.style.color = "red";
+
+}
+
+</script>
+
+
+</body>
+</html>
