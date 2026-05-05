@@ -83,7 +83,7 @@ body {
 }
 .html-card {
   background-image: linear-gradient(rgba(0,0,0,0.5),
-  rgba(0,0,0,0.5)), url("htmlcourse.jpg");
+  rgba(0,0,0,0.5)), url("image/htmlcourse.jpg");
 
   background-size: cover;
   background-position: center;
@@ -91,7 +91,7 @@ body {
 }
 .css-card {
   background-image: linear-gradient(rgba(0,0,0,0.3),
-  rgba(0,0,0,0.3)), url("csscourse.jpg");
+  rgba(0,0,0,0.3)), url("image/csscourse.jpg");
 
   background-size: cover;
   background-position: center;
@@ -99,7 +99,7 @@ body {
 }
 .js-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("jscourse.jpg");
+  rgba(0,0,0,0.4)), url("image/jscourse.jpg");
 
   background-size: cover;
   background-position: center;
@@ -107,7 +107,7 @@ body {
 }
 .python-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("pythonintern.jpg");
+  rgba(0,0,0,0.4)), url("image/pythonintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -116,7 +116,7 @@ body {
 
 .data-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("ds.jpg");
+  rgba(0,0,0,0.4)), url("image/ds.jpg");
 
   background-size: cover;
   background-position: center;
@@ -125,7 +125,7 @@ body {
 
 .database-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("datamanagment.jpg");
+  rgba(0,0,0,0.4)), url("image/datamanagment.jpg");
 
   background-size: cover;
   background-position: center;
@@ -133,7 +133,7 @@ body {
 }
 .os-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("os.jpg");
+  rgba(0,0,0,0.4)), url("image/os.jpg");
 
   background-size: cover;
   background-position: center;
@@ -142,7 +142,7 @@ body {
 
 .computer-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("computer.jpg");
+  rgba(0,0,0,0.4)), url("image/computer.jpg");
 
   background-size: cover;
   background-position: center;
@@ -151,7 +151,7 @@ body {
 
 .git-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("git.jpg");
+  rgba(0,0,0,0.4)), url("image/git.jpg");
 
   background-size: cover;
   background-position: center;
@@ -160,7 +160,7 @@ body {
 
 .node-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("node.jpg");
+  rgba(0,0,0,0.4)), url("image/node.jpg");
 
   background-size: cover;
   background-position: center;
@@ -168,7 +168,7 @@ body {
 }
 .react-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("react.png");
+  rgba(0,0,0,0.4)), url("image/react.png");
 
   background-size: cover;
   background-position: center;
@@ -177,7 +177,7 @@ body {
 
 .ui-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("ui.jpg");
+  rgba(0,0,0,0.4)), url("image/ui.jpg");
 
   background-size: cover;
   background-position: center;
@@ -186,7 +186,7 @@ body {
 
 .java-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("java.jpg");
+  rgba(0,0,0,0.4)), url("image/java.jpg");
 
   background-size: cover;
   background-position: center;
@@ -194,7 +194,7 @@ body {
 }
 .c-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("c.png");
+  rgba(0,0,0,0.4)), url("image/c.png");
 
   background-size: cover;
   background-position: center;
@@ -202,7 +202,7 @@ body {
 }
 .cplus-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("c++.jpg");
+  rgba(0,0,0,0.4)), url("image/c++.jpg");
 
   background-size: cover;
   background-position: center;
@@ -211,7 +211,7 @@ body {
 
 .cyber-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("cyberintern.jpg");
+  rgba(0,0,0,0.4)), url("image/cyberintern.jpg");
 
   background-size: cover;
   background-position: center;
@@ -219,7 +219,7 @@ body {
 }
 .cloud-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("cloud.jpg");
+  rgba(0,0,0,0.4)), url("image/cloud.jpg");
 
   background-size: cover;
   background-position: center;
@@ -228,7 +228,7 @@ body {
 
 .ml-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("ml.jpg");
+  rgba(0,0,0,0.4)), url("image/ml.jpg");
 
   background-size: cover;
   background-position: center;
@@ -237,7 +237,7 @@ body {
 
 .ai-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("aicourse.jpg");
+  rgba(0,0,0,0.4)), url("image/aicourse.jpg");
 
   background-size: cover;
   background-position: center;
@@ -245,7 +245,7 @@ body {
 }
 .resume-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("resume.jpg");
+  rgba(0,0,0,0.4)), url("image/resume.jpg");
 
   background-size: cover;
   background-position: center;
@@ -254,7 +254,7 @@ body {
 
 .interview-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("interview.jpg");
+  rgba(0,0,0,0.4)), url("image/interview.jpg");
 
   background-size: cover;
   background-position: center;
@@ -263,7 +263,7 @@ body {
 
 .aptitude-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("aptitude.jpg");
+  rgba(0,0,0,0.4)), url("image/aptitude.jpg");
 
   background-size: cover;
   background-position: center;
@@ -271,7 +271,7 @@ body {
 }
 .communication-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("communication.jpg");
+  rgba(0,0,0,0.4)), url("image/communication.jpg");
 
   background-size: cover;
   background-position: center;
@@ -280,7 +280,7 @@ body {
 
 .project-card {
   background-image: linear-gradient(rgba(0,0,0,0.4),
-  rgba(0,0,0,0.4)), url("project.jpg");
+  rgba(0,0,0,0.4)), url("image/project.jpg");
 
   background-size: cover;
   background-position: center;
